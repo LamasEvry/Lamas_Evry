@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Affiche l'image de l'event (pas la galerie)
       let imgSrc = '';
       if (event.img_local) {
-        imgSrc = '../../infos/image/' + event.image.replace(/^.*[\\\/]/, '');
+        imgSrc = '../infos/image/' + event.image.replace(/^.*[\\\/]/, '');
       } else {
         imgSrc = event.image;
       }
@@ -123,6 +123,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         preview.style.objectFit = 'cover';
         preview.style.borderRadius = '10px';
         preview.style.marginBottom = '14px';
+
+        // Si l'image échoue à charger, tente la version sans accent
+        preview.onerror = function () {
+          // Fonction pour retirer tous les accents d'une chaîne
+          function removeAccents(str) {
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          }
+          // Si déjà sans accent, ne tente pas à l'infini
+          const altSrc = removeAccents(imgSrc);
+          if (altSrc !== imgSrc) {
+            preview.onerror = null; // évite boucle infinie
+            preview.src = altSrc;
+          }
+        };
+
         card.appendChild(preview);
       }
       const btn = document.createElement('button');
