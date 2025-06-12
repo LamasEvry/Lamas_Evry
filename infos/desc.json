@@ -1,0 +1,22 @@
+{
+  "titre": "Lamas, une association qui accompagne les artistes",
+  "description": "inserer une description qui sera trop cool",
+  "contacts": [
+    {
+      "nom": "Instagram",
+      "lien": "https://www.instagram.com/lamas_evry/"
+    },
+    {
+      "nom": "Discord",
+      "lien": "https://discord.com/invite/Cux64q7Tt9"
+    },
+    {
+      "nom": "TikTok",
+      "lien": "https://www.tiktok.com/@lamas_evry"
+    },
+    {
+      "nom": "BioLink",
+      "lien": "https://bio.link/associat"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "Artiste": [
+        {
+            "nom": "",
+            "Nom de scene": "lamas",
+            "ville": "evry",
+            "tarif": "0",
+            "distance": "10",
+            "coordonnees": "48.6241665, 2.4289667",
+            "desc": "lamas",
+            "fulldesc": "lamas mais long",
+            "image": "https://github.com/Skoneozole/Skoneozole.github.io/raw/main/image/image.png",
+            "img_local": true,
+            "conta1": "",
+            "lien1": "",
+            "conta2": "",
+            "lien2": "",
+            "conta3": "",
+            "lien3": "",
+            "conta4": "",
+            "lien4": "",
+            "conta5": "",
+            "lien5": "",
+            "conta6": "",
+            "lien6": ""
+        }
+    ]
+}
