@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Récupère la liste des images depuis archive.json (clé "assosImage")
   let images = [];
   try {
-    const response = await fetch('../../infos/archive.json');
+    const response = await fetch('../infos/archive.json');
     const data = await response.json();
     // Correction : la clé est "assosImage" (pas "assosimage")
     images = (data.assosImage || []);

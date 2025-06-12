@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Récupère la liste des events et images depuis archive.json (clé "eventImage")
   let eventImages = [];
   try {
-    const response = await fetch('../../infos/archive.json');
+    const response = await fetch('../infos/archive.json');
     const data = await response.json();
     eventImages = data.eventImage || [];
   } catch (e) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Récupère la liste des events depuis event.json
   let events = [];
   try {
-    const response = await fetch('../../infos/event.json');
+    const response = await fetch('../infos/event.json');
     const data = await response.json();
     events = data.event || [];
   } catch (e) {
